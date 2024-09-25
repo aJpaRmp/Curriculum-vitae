@@ -1,191 +1,255 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap");
 
 :root {
-    --primary-color: #dbdbdb;
-    --secondary-color: #ececec;
+  --primary-color: #dbdbdb;
+  --secondary-color: #ececec;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  background: rgb(227, 253, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: lato, sans-serif;
+  width: 100vw;
+}
+main {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 45px;
+  padding: 0 10px 0 10px;
+  border-radius: 20px;
+  background-color: white;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+header h1 {
+  margin: 15px;
+}
+address img {
+  padding: 5px;
+  background: black;
+  border-radius: 35%;
+  margin: 0 3px 3px 0;
+  vertical-align: middle;
+}
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+nav > ul {
+  display: flex;
+}
+nav > ul > li {
+  margin: 10px;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.mypicture {
+  height: 150px;
+  border-radius: 10px;
+}
+#education,
+#experience {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 5px;
+}
+#education h2,
+#experience h2,
+#info h2,
+#language h2,
+#interests h2,
+footer h2 {
+  padding: 5px;
+  margin: 0;
+  background: var(--primary-color);
+  border-radius: 20px;
+  grid-column: span 2;
+  display: flex;
+  justify-content: center;
+}
+#certificates h2,
+#skills h2 {
+  background: var(--primary-color);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  margin: 0 0 5px 0;
+}
+li {
+  margin: 10px;
+}
+#education > ul,
+#certificates > ul,
+#experience > ul {
+  border-radius: 20px;
+  margin: 0;
+  padding: 5px;
+  background: var(--secondary-color);
+}
+.zsm {
+  margin-right: 10px;
+}
+#experience {
+  margin-top: 5px;
+}
+#certificates > ul {
+  margin-bottom: 6px;
+}
+#downloadBtn {
+  text-transform: uppercase;
+  padding: 15px;
+  background: rgb(94, 94, 94);
+  border: 0;
+  color: white;
+  border-radius: 20px;
+  width: 115px;
+  height: 50px;
+  margin: auto;
 }
 
-html{
-    background: rgb(170, 249, 255);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: lato , sans-serif;
+#info {
+  margin-top: 10px;
 }
-main {        
-    max-width: 40%;      
-    margin: 0 auto;        
-    padding: 10px;        
-    background-color: white;
-    border-radius: 10px;
+.person {
+  display: flex;
+  flex-direction: column;
 }
-
-header{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    margin-bottom: 15px;
+.date {
+  font-size: 11px;
 }
-address img{
-    padding: 5px;
-    background: black;
-    border-radius: 35%;
-    margin: 0 5px 3px 0;
-    vertical-align: middle;
+.name {
+  font-size: 16.5px;
+  font-weight: 600;
 }
-nav{
-    width: 100%;
-    display: flex;
-    justify-content: center;
+.name-c {
+  font-size: 15px;
+  font-weight: 600;
 }
-nav> ul{
-    display: flex;
+address > ul {
+  padding: 0;
 }
-nav>ul>li{
-    margin: 10px;
+.place {
+  border-left: 1px solid gray;
+  margin: 10px;
+  padding-left: 10px;
+  font-weight: 400;
+  font-style: normal;
 }
-ul{
-    list-style-type: none;
+.fieldofstudy,
+.educationlevel {
+  font-size: 15px;
 }
-a{
-    text-decoration: none;
-    color: black;
+.description {
+  font-size: 13px;
 }
-.mypicture{
-    height: 150px;
-    border-radius: 10px;
+.description > ul {
+  list-style-type: square;
+  padding-left: 15px;
+  width: 100%;
 }
-#education, #experience{
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 1fr;
-    gap: 5px
+li > p {
+  margin: 0;
 }
-#education h2, #experience h2, #info h2 , #skills h2, #language h2, #interests h2 , #certificates h2, footer h2 {
-    padding: 5px;
-    margin: 10px 0;
-    background: var(--primary-color);;
-    border-radius: 20px;
-    grid-column: span 2;
-    display: flex;
-    justify-content: center;
+.container {
+  display: flex;
+  width: 100%;
 }
-#education > ul , #certificates > ul, #experience  > ul {
-    border-radius: 20px;
-    padding: 12px;
-    margin: 0 auto;
-    background: var(--secondary-color) ;
+.bassm {
+  grid-column: span 2;
+  margin: auto;
 }
-#certificates > ul
-{
-    margin-bottom: 6px;
+.nameSchool {
+  font-size: 16.5px;
+  font-weight: 600;
 }
-#downloadBtn
-{
-    text-transform: uppercase;
-    padding: 15px;
-    background: rgb(94, 94, 94);
-    border: 0;
-    color: white;
-    border-radius: 20px;
-    width: 115px;
-    height: 50px;
-    margin: auto;
+.fieldofstudy,
+.educationlevel {
+  font-size: 15px;
 }
-#info
-{
-    margin-top: 10px;
-}
-.person
-{
-    display: flex;
-    flex-direction: column;
-}
-.date{
-    font-size: 11px;
-}
-.name
-{
-    font-size: 16.5px;
-    font-weight: 600;
-}
-address > ul
-{
-    padding: 0;
-}
-.place
-{
-    border-left: 1px solid gray;
-    margin: 10px;
-    padding-left: 10px;
-    font-weight: 400;
-    font-style: normal;
-}
-.fieldofstudy,.educationlevel{
-    font-size: 15px;
-}
-.description
-{
-    font-size: 13px;
-}
-.description > ul
-{
-    list-style-type: square;
-}
-li>p{
-    margin: 0;
-}
-.containerSC, .containerLI
-{
-    display: flex;
-}
-.bassm
-{
-    grid-column: span 2;
-}
-.nameSchool
-{
-    font-size: 16.5px;
-    font-weight: 600;
-}
-.fieldofstudy,.educationlevel{
-    font-size: 15px;
-}
-#skills, #language, #interests, #certificates {
-    width: 100%;
-    margin: 0 5px;
-}
-#skills > ul, #language > ul, #interests > ul  {
-    margin: 0;
-    padding: 0;
-    font-size: 13.5px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-#skills > ul > li, #language > ul > li, #interests > ul > li{
-    margin: 4px;
-    padding: 8px;
-    border-radius: 8px;
-    background: var(--secondary-color);
-}
-#info
-{
-    margin-bottom: 15px;
-}
-#info > ul{
-    margin: 4px;
-    padding: 8px;
-    border-radius: 8px;
-    background: var(--secondary-color);
-}
-#info > ul > li{
-    margin-top: 15px;
-    padding: 0px 10px;
-}
-.linki{
-    margin: 10px;
-    display: flex;
-    justify-content: space-evenly;
+#skills,
+#certificates {
+  width: 50%;
+  margin: 10px 5px 5px 2.5px;
 }
 
+#interests,
+#language {
+  width: 100%;
+  margin: 0 5px;
+}
+#skills > ul,
+#language > ul,
+#interests > ul {
+  margin: 0;
+  padding: 0;
+  font-size: 13.5px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#skills > ul > li,
+#language > ul > li,
+#interests > ul > li {
+  margin: 4px;
+  padding: 8px;
+  border-radius: 8px;
+  background: var(--secondary-color);
+}
+#info {
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+#info > ul {
+  margin: 4px;
+  padding: 8px;
+  border-radius: 8px;
+  background: var(--secondary-color);
+}
+#info > ul > li {
+  margin-top: 15px;
+  padding: 0px 10px;
+}
+.linki {
+  margin: 10px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.pinfo {
+  text-align: center;
+  font-size: 7px;
+  margin-bottom: 2px;
+}
+.pinfo > a {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 600px) {
+  i {
+    display: none;
+  }
+  address > ul > li {
+    margin: 10px 0 10px 5px;
+  }
+  html {
+    font-size: 90%;
+  }
+  header h1 {
+    margin: 5px;
+  }
+}
