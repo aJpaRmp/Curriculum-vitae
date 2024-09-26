@@ -27,7 +27,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 header h1 {
   margin: 15px;
@@ -36,19 +36,11 @@ address img {
   padding: 5px;
   background: black;
   border-radius: 35%;
-  margin: 0 3px 3px 0;
+  margin: 5px 3px 3px 0;
   vertical-align: middle;
 }
-nav {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-nav > ul {
-  display: flex;
-}
-nav > ul > li {
-  margin: 10px;
+address > ul > li {
+  font-size: 87%;
 }
 ul {
   list-style-type: none;
@@ -82,6 +74,9 @@ footer h2 {
   display: flex;
   justify-content: center;
 }
+#experience > .bassm {
+  margin: auto;
+}
 #certificates h2,
 #skills h2 {
   background: var(--primary-color);
@@ -91,8 +86,12 @@ footer h2 {
   padding: 5px;
   margin: 0 0 5px 0;
 }
-li {
+#education > ul > li,
+#experience > ul > li {
   margin: 10px;
+}
+#certificates > ul > li {
+  margin: 6px;
 }
 #education > ul,
 #certificates > ul,
@@ -106,7 +105,7 @@ li {
   margin-right: 10px;
 }
 #experience {
-  margin-top: 5px;
+  margin: 5px 0;
 }
 #certificates > ul {
   margin-bottom: 6px;
@@ -122,7 +121,10 @@ li {
   height: 50px;
   margin: auto;
 }
-
+#language > ul > li,
+#interests > ul > li {
+  font-size: 12px;
+}
 #info {
   margin-top: 10px;
 }
@@ -172,7 +174,6 @@ li > p {
 }
 .bassm {
   grid-column: span 2;
-  margin: auto;
 }
 .nameSchool {
   font-size: 16.5px;
@@ -183,15 +184,14 @@ li > p {
   font-size: 15px;
 }
 #skills,
-#certificates {
-  width: 50%;
-  margin: 10px 5px 5px 2.5px;
-}
-
-#interests,
 #language {
   width: 100%;
-  margin: 0 5px;
+  margin-right: 2.5px;
+}
+#interests,
+#certificates {
+  width: 100%;
+  margin-left: 2.5px;
 }
 #skills > ul,
 #language > ul,
@@ -225,7 +225,7 @@ li > p {
   margin-top: 15px;
   padding: 0px 10px;
 }
-.linki {
+#links {
   margin: 10px;
   display: flex;
   justify-content: space-evenly;
@@ -236,7 +236,11 @@ li > p {
   margin-bottom: 2px;
 }
 .pinfo > a {
-  color: rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.3);
+}
+.rodo {
+  color: rgba(0, 0, 0, 0.5);
+  margin: 25px 10px;
 }
 
 @media (max-width: 600px) {
@@ -251,5 +255,12 @@ li > p {
   }
   header h1 {
     margin: 5px;
+  }
+  nav > ul > li {
+    margin: 5px;
+    font-size: 12px;
+  }
+  .navOff {
+    display: none;
   }
 }
