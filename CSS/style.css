@@ -15,7 +15,7 @@ body {
   font-family: lato, sans-serif;
   width: 100vw;
 }
-main {
+.cv {
   width: 100%;
   max-width: 900px;
   margin: 0 45px;
