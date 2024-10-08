@@ -1,0 +1,181 @@
+@import "../SASS/_reset";
+@import "../SASS/_font";
+@import "../SASS/_variables";
+@import "../SASS/_mixin";
+@import "../SASS/_media";
+
+body {
+  background-color: $primary-color !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cv {
+  width: 210mm;
+  margin: 2 * $five;
+  padding: $five;
+  background: $white;
+  border-radius: $radius;
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  a {
+    text-decoration: none;
+    color: $black;
+    font-size: 0.9rem;
+  }
+  h2 {
+    background-color: $nav-color;
+    border-radius: $radius;
+    padding: $five / 1.5;
+    font-size: 22px;
+    margin-bottom: $five;
+  }
+}
+header {
+  margin-bottom: $five;
+  .mypicture {
+    border: 2px solid $nav-color;
+    border-radius: $radius;
+    height: 150px;
+  }
+  button {
+    text-transform: uppercase;
+  }
+  address {
+    font-size: 1.1em;
+    margin: 0;
+    ul {
+      margin: 0;
+      padding: 0;
+      vertical-align: middle;
+    }
+    li:first-child {
+      margin-bottom: 2 * $five;
+    }
+    .img-adr {
+      background: $black;
+      border-radius: $radius;
+      padding: $five;
+    }
+    .link-profile{
+      margin-left: 2 * $five;
+    }
+  }
+}
+.edu-cert-lang-ing{
+  width: 40.7%; 
+  margin-right: $five;
+  #education {
+    ul {
+      @include ul-styles;
+    }
+    .date {
+      font-size: 0.6em;
+      opacity: 0.7;
+      padding-left: $five;
+    }
+    .name {
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+    .study {
+      font-size: 0.7em;
+    }
+  }
+  #certificates{
+    ul{
+      @include ul-styles;
+      width: 33%;
+      margin-left: $five;
+    }
+    .date {
+      font-size: 0.6em;
+      opacity: 0.7;
+      padding-left: $five;
+    }
+    .name-c{
+      font-weight: bold;
+      font-size: 0.7rem;
+    }
+  }
+  #language{
+    width: 35%;
+    ul{
+      li{
+        @include ul-styles;
+        font-size: 0.75rem;
+      }
+    }
+  }
+  #interests{
+    width: 65%;
+    margin-left: $five;
+    @extend #language
+  }
+}
+
+#experience{
+  width: calc(100% - 40.7% - $five);
+  ul {
+    @include ul-styles;
+    ol{
+      list-style-type: disc;
+      padding: 0 0 0 18px;
+      font-size: 0.7em;
+    }
+  }
+  .date {
+    font-size: 0.6em;
+    opacity: 0.7;
+    padding-left: $five;
+  }
+  .name {
+    font-weight: bold;
+    font-size: 0.9rem;
+  }
+  .city{
+    font-size: 0.8em;
+  }
+  .position{
+    font-size: 0.8em;
+  }
+  .canpack{
+    width: 36%;
+  }
+  .biziel{
+    width: 62.7%;
+    margin-left: $five;
+  }
+  .iiukw{
+    width: 40%;
+  }
+  .bassi{
+    width: 58%;
+    margin-left: $five;
+  }
+  .bassm{
+    width: 100%;
+  }
+}
+
+#skills{
+  ul{
+    li{
+      @include ul-styles;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+.info{
+  font-size: 0.8rem;
+  ul{
+    @include ul-styles;
+    li{
+      padding: $five;
+    }
+  }
+}
